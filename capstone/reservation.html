@@ -1,0 +1,101 @@
+<!DOCTYPE hmtl>
+<hmtl lang="en">
+ <script src="database.js"></script>
+  <body style="background-color: rgb(30, 255, 0);">
+    <form>
+      <h1 style=>Enter your information below to make a reservation</h1>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" ><br>
+        
+        <br>
+        <label for="date">Date (dd/mm)</label><br>
+        <input typye="text" id="date"><br><br>
+        <label for="time">Time (after 12 PM or before 11)</label><br>
+        <input type="number" id ="time"><br><br>
+        <label for="#" id="#">Party size</label><br>
+        <input type="number" id = "size"><br>
+        <button type="button" onclick="add()">submit</button>
+        <p id="Restext">Thank you for your custom!</p>
+    </form>
+        <br><br>
+        <style>
+          .dropbtn {
+            background-color: #3498DB;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+          }
+          
+          .dropbtn:hover, .dropbtn:focus {
+            background-color: #2980B9;
+          }
+          
+          .dropdown {
+            position: relative;
+            display: inline-block;
+          }
+          
+          .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            overflow: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+          }
+          
+          .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+          }
+          
+          .dropdown a:hover {background-color: #ddd;}
+          
+          .show {display: block;}
+          </style>
+          </head>
+          <body style="background-color:white;">
+          
+          
+          <b>Click on the button to open the dropdown menu. And then pick what you need</b>
+          <br>
+          <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="customer.html">Main page </a>
+              <a href="check_res.html">Check reservation</a>
+              <a href="contact.html">Contact</a>
+            </div>
+          </div>
+          
+          <script>
+          /* When the user clicks on the button, 
+          toggle between hiding and showing the dropdown content */
+          function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+          }
+          
+          // Close the dropdown if the user clicks outside of it
+          window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+              var dropdowns = document.getElementsByClassName("dropdown-content");
+              var i;
+              for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                  openDropdown.classList.remove('show');
+                }
+              }
+            }
+          }
+          </script>
+      <br>
+      <br>
+      <img src="https://th.bing.com/th/id/OIP.x3-NKtYHPSfirsuHA9s7IwHaE7?rs=1&pid=ImgDetMain">
+    </body>
+</hmtl>
